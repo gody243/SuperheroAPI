@@ -1,23 +1,19 @@
-const super_container=
-document.getElementById("super_container")
+
+
+const super_container= document.getElementById("super_container")
 const super_number= 731
-const colors={
-    intelligence:'#DEF3FD',
-    strength:'#FCF7DE',
-    speed:'#F5F5F5',
-    durability:'#98d7a5',
-    power:'#f8d5a3',
-    combat:'E6E0D4'
-}
-const main_power=Object.keys(colors)
+
+//const main_power=Object.keys(colors)
 
 const fetchSuperhero= async () =>{
     for(let i=1; i<=super_number;i++){
         await getSuperhero(i);
     }
 }
+
 const getSuperhero= async id =>{
-    const url=`https://www.superheroapi.com/api.php/4267454303279480/${id}`
+    const url=`https://www.superheroapi.com/api.php/4267454303279480
+    /${id}`
     const res= await fetch(url)
     const superhero= await res.json()
     createSuperheroCard(superhero)
